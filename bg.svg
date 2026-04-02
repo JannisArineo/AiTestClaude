@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#0d0d2b"/>
+      <stop offset="35%"  stop-color="#1a2a6c"/>
+      <stop offset="65%"  stop-color="#b21f1f"/>
+      <stop offset="100%" stop-color="#fdbb2d"/>
+    </linearGradient>
+    <linearGradient id="mtn1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#5e7bb5"/>
+      <stop offset="100%" stop-color="#2d4070"/>
+    </linearGradient>
+    <linearGradient id="mtn2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#2e5e4e"/>
+      <stop offset="100%" stop-color="#14302a"/>
+    </linearGradient>
+    <linearGradient id="mtn3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#1c3d2e"/>
+      <stop offset="100%" stop-color="#0a1f18"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#0f2a1e"/>
+      <stop offset="100%" stop-color="#060f0a"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="60%" r="15%">
+      <stop offset="0%"   stop-color="#fddd60" stop-opacity="1"/>
+      <stop offset="40%"  stop-color="#f4a030" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#f4a030" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="sunHalo" cx="50%" cy="100%" r="60%">
+      <stop offset="0%"   stop-color="#fddd60" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#fddd60" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+
+  <!-- Sun halo -->
+  <ellipse cx="960" cy="640" rx="600" ry="300" fill="url(#sunHalo)"/>
+
+  <!-- Sun -->
+  <circle cx="960" cy="640" r="65" fill="url(#sun)" filter="url(#glow)"/>
+  <circle cx="960" cy="640" r="38" fill="#fff8a0" opacity="0.9"/>
+
+  <!-- Stars -->
+  <circle cx="200"  cy="80"  r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="450"  cy="40"  r="1"   fill="white" opacity="0.6"/>
+  <circle cx="700"  cy="100" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="1100" cy="60"  r="1"   fill="white" opacity="0.6"/>
+  <circle cx="1400" cy="90"  r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="1650" cy="45"  r="1"   fill="white" opacity="0.7"/>
+  <circle cx="1800" cy="130" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="340"  cy="160" r="1"   fill="white" opacity="0.6"/>
+  <circle cx="880"  cy="50"  r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="1250" cy="130" r="1"   fill="white" opacity="0.6"/>
+
+  <!-- Far mountains (layer 1) -->
+  <path d="
+    M-10,760
+    L80,560 L150,620 L260,480 L380,570
+    L500,400 L580,460 L660,360 L750,430
+    L840,310 L920,380 L960,330 L1000,370
+    L1080,290 L1160,360 L1260,400 L1340,330
+    L1430,410 L1520,360 L1620,440 L1700,390
+    L1800,460 L1920,400
+    L1920,1080 L-10,1080 Z
+  " fill="url(#mtn1)" opacity="0.75"/>
+
+  <!-- Snow caps layer 1 -->
+  <path d="M500,400 L530,440 L470,440 Z" fill="white" opacity="0.9"/>
+  <path d="M660,360 L690,400 L630,400 Z" fill="white" opacity="0.9"/>
+  <path d="M840,310 L878,358 L802,358 Z" fill="white" opacity="0.95"/>
+  <path d="M960,330 L988,365 L932,365 Z" fill="white" opacity="0.9"/>
+  <path d="M1080,290 L1116,335 L1044,335 Z" fill="white" opacity="0.95"/>
+  <path d="M1340,330 L1368,368 L1312,368 Z" fill="white" opacity="0.9"/>
+
+  <!-- Mid mountains (layer 2) -->
+  <path d="
+    M-10,860
+    L100,680 L200,740 L320,620 L440,700
+    L560,580 L640,640 L730,550 L820,620
+    L900,520 L970,580 L1040,510 L1120,580
+    L1200,620 L1310,540 L1410,610 L1500,550
+    L1600,620 L1700,560 L1800,630 L1920,580
+    L1920,1080 L-10,1080 Z
+  " fill="url(#mtn2)"/>
+
+  <!-- Near mountains / hills (layer 3) -->
+  <path d="
+    M-10,920
+    L120,800 L250,860 L400,760 L520,830
+    L660,740 L750,800 L860,730 L960,790
+    L1060,720 L1160,790 L1280,750 L1400,810
+    L1520,760 L1650,820 L1780,770 L1920,820
+    L1920,1080 L-10,1080 Z
+  " fill="url(#mtn3)"/>
+
+  <!-- Ground / meadow -->
+  <path d="
+    M-10,980
+    Q480,940 960,960
+    Q1440,980 1920,950
+    L1920,1080 L-10,1080 Z
+  " fill="url(#ground)"/>
+
+  <!-- Pine trees left side -->
+  <g fill="#0a1f12" opacity="0.9">
+    <polygon points="80,960 95,910 110,960"/>
+    <rect x="92" y="958" width="6" height="22"/>
+    <polygon points="60,970 78,912 96,970"/>
+    <rect x="74" y="967" width="8" height="25"/>
+    <polygon points="115,965 131,915 147,965"/>
+    <rect x="127" y="963" width="7" height="20"/>
+    <polygon points="30,975 50,920 70,975"/>
+    <rect x="46" y="972" width="8" height="28"/>
+  </g>
+
+  <!-- Pine trees right side -->
+  <g fill="#0a1f12" opacity="0.9">
+    <polygon points="1780,965 1797,912 1814,965"/>
+    <rect x="1793" y="963" width="7" height="20"/>
+    <polygon points="1805,955 1825,900 1845,955"/>
+    <rect x="1821" y="952" width="8" height="28"/>
+    <polygon points="1840,968 1858,918 1876,968"/>
+    <rect x="1854" y="965" width="7" height="22"/>
+    <polygon points="1860,975 1880,925 1900,975"/>
+    <rect x="1876" y="972" width="8" height="28"/>
+  </g>
+
+  <!-- ===== WOMAN SILHOUETTE (foreground left) ===== -->
+  <g transform="translate(340, 760)" filter="url(#blur2)">
+    <!-- Shadow on ground -->
+    <ellipse cx="18" cy="222" rx="30" ry="6" fill="black" opacity="0.3"/>
+    <!-- Legs -->
+    <path d="M10,160 Q8,190 6,222" stroke="#0d0d0d" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M26,160 Q28,190 30,222" stroke="#0d0d0d" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <!-- Skirt / dress lower -->
+    <path d="M2,120 Q-10,160 -5,200 Q10,210 18,205 Q30,210 42,200 Q48,160 34,120 Z" fill="#1a0a20"/>
+    <!-- Torso -->
+    <rect x="6" y="68" width="24" height="58" rx="5" fill="#0d0d0d"/>
+    <!-- Left arm (down, relaxed) -->
+    <path d="M8,80 Q-8,110 -10,135" stroke="#0d0d0d" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <!-- Left hand -->
+    <circle cx="-10" cy="138" r="6" fill="#0d0d0d"/>
+    <!-- RIGHT ARM — raised and waving -->
+    <path d="M28,78 Q52,50 72,28 Q84,16 90,10" stroke="#0d0d0d" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <!-- Hand -->
+    <circle cx="92" cy="8" r="8" fill="#0d0d0d"/>
+    <!-- Fingers spread/waving -->
+    <line x1="90" y1="2"  x2="86" y2="-10" stroke="#0d0d0d" stroke-width="3" stroke-linecap="round"/>
+    <line x1="94" y1="0"  x2="93" y2="-12" stroke="#0d0d0d" stroke-width="3" stroke-linecap="round"/>
+    <line x1="99" y1="3"  x2="101" y2="-9" stroke="#0d0d0d" stroke-width="3" stroke-linecap="round"/>
+    <line x1="103" y1="8" x2="108" y2="-2" stroke="#0d0d0d" stroke-width="3" stroke-linecap="round"/>
+    <!-- Neck -->
+    <rect x="13" y="54" width="12" height="16" rx="4" fill="#0d0d0d"/>
+    <!-- Head -->
+    <ellipse cx="18" cy="42" rx="20" ry="22" fill="#0d0d0d"/>
+    <!-- Hair (long, flowing) -->
+    <path d="M-2,30 Q-18,55 -14,80 Q-8,90 -4,85 Q-2,60 4,55" fill="#1a0808"/>
+    <path d="M36,28 Q50,50 46,75 Q40,85 36,80 Q38,58 32,52" fill="#1a0808"/>
+    <path d="M-2,28 Q0,8 18,5 Q36,8 38,28" fill="#1a0808"/>
+  </g>
+
+  <!-- Subtle mist / atmosphere overlay -->
+  <rect width="1920" height="1080" fill="url(#sunHalo)" opacity="0.2"/>
+</svg>
