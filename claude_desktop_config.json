@@ -1,0 +1,24 @@
+{
+  "_comment": [
+    "Add the contents of 'mcpServers' to your Claude Desktop config.",
+    "Default locations:",
+    "  macOS : ~/Library/Application Support/Claude/claude_desktop_config.json",
+    "  Windows: %APPDATA%\\Claude\\claude_desktop_config.json",
+    "",
+    "Set ANTHROPIC_API_KEY as a system environment variable,",
+    "or replace the placeholder below with your actual key.",
+    "",
+    "After saving, restart Claude Desktop to load the new MCP server."
+  ],
+  "mcpServers": {
+    "agent-router": {
+      "command": "python",
+      "args": [
+        "/ABSOLUTE/PATH/TO/agent_router/mcp_server.py"
+      ],
+      "env": {
+        "ANTHROPIC_API_KEY": "YOUR_API_KEY_HERE"
+      }
+    }
+  }
+}
